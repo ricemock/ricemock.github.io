@@ -622,6 +622,8 @@ input, select, textarea {
 		border: 0;
 		display: inline-block;
 		position: relative;
+		height: auto;
+		max-width: 100%;
 	}
 
 		.image:before {
