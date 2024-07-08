@@ -10,10 +10,10 @@
 
 <body>
     <div class="container">
-        <h1>Loading, Please Wait...</h1>
+        <h1 class="text">Loading, Please Wait...</h1>
 
         <div class="loader">
-            <image src="/images/mock_logo.png" alt="Logo"></image>
+            <image src="mock_logo.png" alt="Logo"></image>
         </div>
 
     </div>
@@ -25,15 +25,14 @@
 
 <style>
     /* CSS for centering all components of loading screen */
-    body {
+    body,
+    html {
         display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
         height: 100vh;
         margin: 0;
         font-family: 'Outfit';
-        position: relative;
     }
 
     .container {
@@ -46,35 +45,26 @@
 
     /* CSS for rotating component of loading screen */
     .loader {
-        /* Drawing the loader */
         border: 16px solid #f3f3f3;
         border-radius: 50%;
-        width: 120px;
+        width: 60px;
         height: 120px;
         animation: spin 6s linear infinite;
-        /* Centering the loader */
         display: flex;
         justify-content: center;
         align-items: center;
-        /* Safari */
-        -webkit-animation: spin 6s linear infinite;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
     }
 
-    /* CSS for SQUARE logo */
+    /* CSS for the logo inside the loader */
     .loader img {
         width: 160px;
         height: 160px;
     }
 
-    /* CSS for centering text */
-    h1 {
-        margin-bottom: 40px;
+    /* Padding between text and rotating component */
+    .text {
+        margin-bottom: 50px;
     }
-
 
     /* Allows for spin on Safari */
     @-webkit-keyframes spin {
