@@ -1,11 +1,11 @@
-// Play initial animations on page load.
+// Display laoding screen
 $window.on('load', function () {
 	window.setTimeout(function () {
 		$body.removeClass('is-preload');
 	}, 100);
-	loadPageContent(); // Load loadpage.html content
+	loadPageContent(); 
 });
 
 function loadPageContent() {
-	$('#main').load('loadpage.html');
+	$('#main').load('index.html');
 }
